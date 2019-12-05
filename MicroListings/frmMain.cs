@@ -19,12 +19,59 @@ namespace MicroListings
 
         private void txtPasteSKUs_TextChanged(object sender, EventArgs e)
         {
-            cmbSKU.Items.Clear();
-            for (int i=-0; i < txtPasteSKUs.Lines.Count(); i++)
+            
+            
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEditSkus_Click(object sender, EventArgs e)
+        {
+            txtPasteSKUs.Enabled = true;
+        }
+
+        private void btnSaveSkus_Click(object sender, EventArgs e)
+        {
+            txtPasteSKUs.Enabled = false;
+           listBoxSkus.Items.Clear();
+
+          for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
             {
-                cmbSKU.Items.Add(txtPasteSKUs.Lines[i]);
-                Globals.PRODUCTS = new string[]
-            }
+               listBoxSkus.Items.Add(txtPasteSKUs.Lines[i]);
+           }
+            Globals.PRODUCTS = new string[txtPasteSKUs.Lines.Count(), 155];
+        }
+
+        private void btnPasteSkus_Click(object sender, EventArgs e)
+        {
+            txtPasteSKUs.Paste();
+        }
+
+        private void btnPastePrices_Click(object sender, EventArgs e)
+        {
+            txtPastePrices.Paste();
+        }
+
+        private void txtPastePrices_TextChanged(object sender, EventArgs e)
+        {
+            txtPastePrices.Text = txtPastePrices.Text.Replace("$", "");
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveAll();
+        }
+        private void SaveAll()
+        {
+
+        }
+
+        private void listBoxSkus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SaveAll();
         }
     }
 }

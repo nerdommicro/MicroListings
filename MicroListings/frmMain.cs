@@ -16,5 +16,15 @@ namespace MicroListings
         {
             InitializeComponent();
         }
+
+        private void txtPasteSKUs_TextChanged(object sender, EventArgs e)
+        {
+            cmbSKU.Items.Clear();
+            for (int i=-0; i < txtPasteSKUs.Lines.Count(); i++)
+            {
+                cmbSKU.Items.Add(txtPasteSKUs.Lines[i]);
+                Globals.PRODUCTS = new string[]
+            }
+        }
     }
 }

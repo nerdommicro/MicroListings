@@ -31,40 +31,36 @@ namespace MicroListings
         private void btnEditSkus_Click(object sender, EventArgs e)
         {
             txtPasteSKUs.Enabled = true;
+            btnSaveSkus.Enabled = true;
         }
 
         private void btnSaveSkus_Click(object sender, EventArgs e)
         {
             txtPasteSKUs.Enabled = false;
-           listBoxSkus.Items.Clear();
+            listBoxSkus.Items.Clear();
+
+          Globals.SKUS = new string[txtPasteSKUs.Lines.Count()];
+          btnSaveSkus.Enabled = false;
 
           for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
             {
                listBoxSkus.Items.Add(txtPasteSKUs.Lines[i]);
+                Globals.SKUS[i] = txtPasteSKUs.Lines[i];
            }
-            Globals.PRODUCTS = new string[txtPasteSKUs.Lines.Count(), 155];
+           
         }
 
-        private void btnPasteSkus_Click(object sender, EventArgs e)
-        {
-            txtPasteSKUs.Paste();
-        }
+        
 
-        private void btnPastePrices_Click(object sender, EventArgs e)
-        {
-            txtPastePrices.Paste();
-        }
+        
 
         private void txtPastePrices_TextChanged(object sender, EventArgs e)
         {
             txtPastePrices.Text = txtPastePrices.Text.Replace("$", "");
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            SaveAll();
-        }
-        private void SaveAll()
+       
+       private void SaveAll()
         {
 
         }
@@ -72,6 +68,11 @@ namespace MicroListings
         private void listBoxSkus_SelectedIndexChanged(object sender, EventArgs e)
         {
             SaveAll();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,24 @@ namespace MicroListings
 {
     public static class Globals
     {
-        public static string[,] PRODUCTS;
+        public static string[] SKUS;
+        public static string[] ITEM_NAMES;
+        public static string[] QUANTITIES;
+        public static string[] DESCRIPTIONS;
+        public static string[] BULLET1;
+        public static string[] BULLET2;
+        public static string[] BULLET3;
+        public static string[] BULLET4;
+        public static string[] BULLET5;
+        public static string[] IMAGE1;
+        public static string[] IMAGE2;
+        public static string[] IMAGE3;
+        public static string[] IMAGE4;
+        public static string[] IMAGE5;
+        public static string[] IMAGE6;
+        public static string[] IMAGE7;
+        public static string[] IMAGE8;
+
 
     }
 }

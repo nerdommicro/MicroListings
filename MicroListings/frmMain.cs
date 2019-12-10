@@ -213,7 +213,149 @@ namespace MicroListings
                     catch { }
                    
                 }
+                        Globals.IMAGE1[listBoxSkus.SelectedIndex] = txtImage1.Text;
+                        Globals.IMAGE2[listBoxSkus.SelectedIndex] = txtImage2.Text;
+                        Globals.IMAGE3[listBoxSkus.SelectedIndex] = txtImage3.Text;
+                        Globals.IMAGE4[listBoxSkus.SelectedIndex] = txtImage4.Text;
+                        Globals.IMAGE5[listBoxSkus.SelectedIndex] = txtImage5.Text;
+                        Globals.IMAGE6[listBoxSkus.SelectedIndex] = txtImage6.Text;
+                        Globals.IMAGE7[listBoxSkus.SelectedIndex] = txtImage7.Text;
+                        Globals.IMAGE8[listBoxSkus.SelectedIndex] = txtImage8.Text;
             AddTreeNodes();
+        }
+
+        private void btnSaveFile_Click(object sender, EventArgs e)
+        {
+            string filename = @"C:\Users\SFDSALES\Documents\MicroListings\Listings" + System.DateTime.Today.Month + "_" + System.DateTime.Today.Day + "_" + System.DateTime.Today.Year + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + ".txt";
+            if (!(System.IO.File.Exists(filename))) { System.IO.File.Copy(@"C:\Users\SFDSALES\Documents\MicroListings\amazon_feed.txt", filename); }
+            
+            System.IO.StreamWriter file1 = new System.IO.StreamWriter(filename, true);
+
+            string line1 = txtFeedProductType.Text + "\t" +
+                           txtParentSku.Text + "\t" +
+                           txtBrand.Text + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           txtParentItemName.Text + "\t" +
+                           txtManufacturer.Text + "\t" +
+                           txtParentSku.Text + "\t" +
+                           txtItemType.Text + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" + //image8
+                            "" + "\t" + //image9
+                           "Parent" + "\t" +
+                           "" + "\t" +
+                           "" + "\t" +
+                           txtVariationTheme.Text + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                            "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "Migrated Template" +
+                            "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                           "" + "\t" + "" + "\t" + "" + "\t"
+
+
+
+
+                           ;
+
+
+
+            file1.WriteLine(line1);
+
+            string[] lines = new string[txtPasteSKUs.Lines.Count()];
+            
+            for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
+            {
+                lines[i] = txtFeedProductType.Text + "\t" +
+                            Globals.SKUS[i] + "\t" +
+                            txtBrand.Text + "\t" +
+                            "" + "\t" +
+                            "" + "\t" +
+                            Globals.ITEM_NAMES[i] + "\t" +
+                            txtManufacturer.Text + "\t" +
+                            Globals.SKUS[i] + "\t" +
+                            txtItemType.Text + "\t" +
+                            Globals.PRICES[i] + "\t" +
+                            Globals.QUANTITIES[i] + "\t" +
+                            Globals.IMAGE1[i] + "\t" +
+                            Globals.IMAGE2[i] + "\t" +
+                            Globals.IMAGE3[i] + "\t" +
+                            Globals.IMAGE4[i] + "\t" +
+                            Globals.IMAGE5[i] + "\t" +
+                            Globals.IMAGE6[i] + "\t" +
+                            Globals.IMAGE7[i] + "\t" +
+                            Globals.IMAGE8[i] + "\t" +
+                             "" + "\t" + //image9
+                            "Child" + "\t" +
+                            txtParentSku.Text + "\t" +
+                            txtRelationshipType.Text + "\t" +
+                            txtVariationTheme.Text + "\t" +
+                            "" + "\t" +
+                            txtDescription.Text + "\t" +
+                            "" + "\t" +
+                            Globals.BULLET1[i] + "\t" +
+                            Globals.BULLET2[i] + "\t" +
+                            Globals.BULLET3[i] + "\t" +
+                            Globals.BULLET4[i] + "\t" +
+                            Globals.BULLET5[i] + "\t" +
+                            "" + "\t" +
+                            "" + "\t" +
+                            "" + "\t" +
+                            "" + "\t" +
+                            "" + "\t" +
+                            Globals.COLORNAMES[i] + "\t" +
+                             "" + "\t" +
+                             txtKeywords.Text + "\t" +
+                             "" + "\t" +
+                             "" + "\t" +
+                             "" + "\t" +
+                             "" + "\t" +
+                             "" + "\t" +
+                             "" + "\t" +
+                             Globals.SIZENAMES[i] + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "Migrated Template" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
+                             "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t";
+                            file1.WriteLine(lines[i]);
+
+
+            }
+            
+            
+
+            
+
+
+
         }
     }
 }

@@ -38,6 +38,8 @@
             this.listBoxSkus = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageHome = new System.Windows.Forms.TabPage();
+            this.txtParentItemName = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtKeywords = new System.Windows.Forms.TextBox();
             this.txtVariationTheme = new System.Windows.Forms.TextBox();
@@ -91,11 +93,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtBrand = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtItemType = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btnSaveAll = new System.Windows.Forms.Button();
-            this.txtParentItemName = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.btnSaveFile = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             this.tabPageDescription.SuspendLayout();
@@ -230,6 +231,22 @@
             this.tabPageHome.TabIndex = 2;
             this.tabPageHome.Text = "Home";
             this.tabPageHome.UseVisualStyleBackColor = true;
+            // 
+            // txtParentItemName
+            // 
+            this.txtParentItemName.Location = new System.Drawing.Point(6, 253);
+            this.txtParentItemName.Name = "txtParentItemName";
+            this.txtParentItemName.Size = new System.Drawing.Size(792, 22);
+            this.txtParentItemName.TabIndex = 51;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(4, 237);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(102, 15);
+            this.label20.TabIndex = 50;
+            this.label20.Text = "Parent Item Name";
             // 
             // label18
             // 
@@ -736,13 +753,13 @@
             this.label7.TabIndex = 54;
             this.label7.Text = "Brand";
             // 
-            // textBox1
+            // txtItemType
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 463);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
-            this.textBox1.TabIndex = 57;
-            this.textBox1.Text = "business-and-store-sign-holders";
+            this.txtItemType.Location = new System.Drawing.Point(73, 463);
+            this.txtItemType.Name = "txtItemType";
+            this.txtItemType.Size = new System.Drawing.Size(184, 20);
+            this.txtItemType.TabIndex = 57;
+            this.txtItemType.Text = "business-and-store-sign-holders";
             // 
             // label19
             // 
@@ -755,7 +772,7 @@
             // 
             // btnSaveAll
             // 
-            this.btnSaveAll.Location = new System.Drawing.Point(706, 467);
+            this.btnSaveAll.Location = new System.Drawing.Point(606, 467);
             this.btnSaveAll.Name = "btnSaveAll";
             this.btnSaveAll.Size = new System.Drawing.Size(90, 27);
             this.btnSaveAll.TabIndex = 51;
@@ -763,28 +780,23 @@
             this.btnSaveAll.UseVisualStyleBackColor = true;
             this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
             // 
-            // txtParentItemName
+            // btnSaveFile
             // 
-            this.txtParentItemName.Location = new System.Drawing.Point(6, 253);
-            this.txtParentItemName.Name = "txtParentItemName";
-            this.txtParentItemName.Size = new System.Drawing.Size(792, 22);
-            this.txtParentItemName.TabIndex = 51;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(4, 237);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(102, 15);
-            this.label20.TabIndex = 50;
-            this.label20.Text = "Parent Item Name";
+            this.btnSaveFile.Location = new System.Drawing.Point(715, 467);
+            this.btnSaveFile.Name = "btnSaveFile";
+            this.btnSaveFile.Size = new System.Drawing.Size(90, 27);
+            this.btnSaveFile.TabIndex = 59;
+            this.btnSaveFile.Text = "Save File";
+            this.btnSaveFile.UseVisualStyleBackColor = true;
+            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 512);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSaveFile);
+            this.Controls.Add(this.txtItemType);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.btnSaveAll);
             this.Controls.Add(this.txtFeedProductType);
@@ -876,12 +888,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtItemType;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnSaveAll;
         private System.Windows.Forms.Button btnSaveItemDesc;
         private System.Windows.Forms.TextBox txtParentItemName;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnSaveFile;
     }
 }
 

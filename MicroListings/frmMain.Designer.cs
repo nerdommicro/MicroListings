@@ -54,6 +54,7 @@
             this.txtItemNames = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPageDescription = new System.Windows.Forms.TabPage();
+            this.btnSaveItemDesc = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.txtBullets = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -93,7 +94,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btnSaveAll = new System.Windows.Forms.Button();
-            this.btnSaveItemDesc = new System.Windows.Forms.Button();
+            this.txtParentItemName = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             this.tabPageDescription.SuspendLayout();
@@ -197,6 +199,8 @@
             // 
             // tabPageHome
             // 
+            this.tabPageHome.Controls.Add(this.txtParentItemName);
+            this.tabPageHome.Controls.Add(this.label20);
             this.tabPageHome.Controls.Add(this.label18);
             this.tabPageHome.Controls.Add(this.txtKeywords);
             this.tabPageHome.Controls.Add(this.txtVariationTheme);
@@ -230,7 +234,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(7, 212);
+            this.label18.Location = new System.Drawing.Point(7, 197);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(61, 15);
             this.label18.TabIndex = 49;
@@ -239,7 +243,7 @@
             // 
             // txtKeywords
             // 
-            this.txtKeywords.Location = new System.Drawing.Point(69, 209);
+            this.txtKeywords.Location = new System.Drawing.Point(69, 194);
             this.txtKeywords.MaxLength = 250;
             this.txtKeywords.Name = "txtKeywords";
             this.txtKeywords.Size = new System.Drawing.Size(729, 22);
@@ -248,7 +252,7 @@
             // 
             // txtVariationTheme
             // 
-            this.txtVariationTheme.Location = new System.Drawing.Point(551, 138);
+            this.txtVariationTheme.Location = new System.Drawing.Point(552, 144);
             this.txtVariationTheme.Name = "txtVariationTheme";
             this.txtVariationTheme.Size = new System.Drawing.Size(109, 22);
             this.txtVariationTheme.TabIndex = 47;
@@ -256,7 +260,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(549, 122);
+            this.label13.Location = new System.Drawing.Point(550, 128);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 15);
             this.label13.TabIndex = 46;
@@ -264,7 +268,7 @@
             // 
             // txtRelationshipType
             // 
-            this.txtRelationshipType.Location = new System.Drawing.Point(551, 99);
+            this.txtRelationshipType.Location = new System.Drawing.Point(552, 105);
             this.txtRelationshipType.Name = "txtRelationshipType";
             this.txtRelationshipType.Size = new System.Drawing.Size(109, 22);
             this.txtRelationshipType.TabIndex = 45;
@@ -272,7 +276,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(549, 83);
+            this.label12.Location = new System.Drawing.Point(550, 89);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 15);
             this.label12.TabIndex = 44;
@@ -331,19 +335,19 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 237);
+            this.label9.Location = new System.Drawing.Point(5, 278);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 15);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Paste Item Names";
+            this.label9.Text = "Child Item Names";
             // 
             // txtItemNames
             // 
-            this.txtItemNames.Location = new System.Drawing.Point(7, 253);
+            this.txtItemNames.Location = new System.Drawing.Point(6, 296);
             this.txtItemNames.Multiline = true;
             this.txtItemNames.Name = "txtItemNames";
             this.txtItemNames.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtItemNames.Size = new System.Drawing.Size(793, 177);
+            this.txtItemNames.Size = new System.Drawing.Size(793, 137);
             this.txtItemNames.TabIndex = 21;
             // 
             // checkBox1
@@ -370,6 +374,16 @@
             this.tabPageDescription.TabIndex = 0;
             this.tabPageDescription.Text = "Description";
             this.tabPageDescription.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveItemDesc
+            // 
+            this.btnSaveItemDesc.Location = new System.Drawing.Point(702, 397);
+            this.btnSaveItemDesc.Name = "btnSaveItemDesc";
+            this.btnSaveItemDesc.Size = new System.Drawing.Size(90, 27);
+            this.btnSaveItemDesc.TabIndex = 60;
+            this.btnSaveItemDesc.Text = "Save Item";
+            this.btnSaveItemDesc.UseVisualStyleBackColor = true;
+            this.btnSaveItemDesc.Click += new System.EventHandler(this.btnSaveItemDesc_Click);
             // 
             // label17
             // 
@@ -749,15 +763,21 @@
             this.btnSaveAll.UseVisualStyleBackColor = true;
             this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
             // 
-            // btnSaveItemDesc
+            // txtParentItemName
             // 
-            this.btnSaveItemDesc.Location = new System.Drawing.Point(702, 397);
-            this.btnSaveItemDesc.Name = "btnSaveItemDesc";
-            this.btnSaveItemDesc.Size = new System.Drawing.Size(90, 27);
-            this.btnSaveItemDesc.TabIndex = 60;
-            this.btnSaveItemDesc.Text = "Save Item";
-            this.btnSaveItemDesc.UseVisualStyleBackColor = true;
-            this.btnSaveItemDesc.Click += new System.EventHandler(this.btnSaveItemDesc_Click);
+            this.txtParentItemName.Location = new System.Drawing.Point(6, 253);
+            this.txtParentItemName.Name = "txtParentItemName";
+            this.txtParentItemName.Size = new System.Drawing.Size(792, 22);
+            this.txtParentItemName.TabIndex = 51;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(4, 237);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(102, 15);
+            this.label20.TabIndex = 50;
+            this.label20.Text = "Parent Item Name";
             // 
             // frmMain
             // 
@@ -860,6 +880,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnSaveAll;
         private System.Windows.Forms.Button btnSaveItemDesc;
+        private System.Windows.Forms.TextBox txtParentItemName;
+        private System.Windows.Forms.Label label20;
     }
 }
 

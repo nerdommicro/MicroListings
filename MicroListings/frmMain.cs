@@ -70,7 +70,7 @@ namespace MicroListings
               for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
                 {
                    listBoxSkus.Items.Add(txtPasteSKUs.Lines[i]);
-                    Globals.SKUS[i] = txtPasteSKUs.Lines[i];                 
+                   Globals.SKUS[i] = txtPasteSKUs.Lines[i];                
 
                 }
             listBoxSkus.SelectedIndex = 0;
@@ -95,7 +95,7 @@ namespace MicroListings
             }
             if (listBoxSkus.SelectedIndex > -1)
             {
-                for (int i = 0; i < txtPasteSKUs.Lines.Count() - 1; i++)
+                for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
                 {
                     if (!(txtPrices.Text == "")) Globals.PRICES[i] = txtPrices.Lines[i];
                     if (!(txtQuantities.Text == "")) Globals.QUANTITIES[i] = txtQuantities.Lines[i];
@@ -152,7 +152,7 @@ namespace MicroListings
             treeView1.Nodes.Clear();
             for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
             {
-                treeView1.Nodes.Add(Globals.SKUS[i]);
+                treeView1.Nodes.Add(Globals.SKUS[i]); //add root nodes
             }
 
             for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
@@ -160,22 +160,31 @@ namespace MicroListings
                 if (!(txtItemNames.Text == "")) treeView1.Nodes[i].Nodes.Add(Globals.ITEM_NAMES[i]);
             }
             
-            for (int i = 0; i < txtPasteSKUs.Lines.Count() - 1; i++)
+            for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
             {
-                if (!(txtPrices.Text == "")) treeView1.Nodes[i + 1].Nodes.Add(Globals.PRICES[i]);
-                if (!(txtQuantities.Text == "")) treeView1.Nodes[i + 1].Nodes.Add(Globals.QUANTITIES[i]);
+                if (!(txtPrices.Text == "")) treeView1.Nodes[i].Nodes.Add(Globals.PRICES[i]);
+                if (!(txtQuantities.Text == "")) treeView1.Nodes[i].Nodes.Add(Globals.QUANTITIES[i]);
                 if (!(txtBullets.Text == ""))
+                {
                     try
                     {
-                        treeView1.Nodes[i + 1].Nodes.Add(Globals.BULLET1[i]);
-                        treeView1.Nodes[i + 1].Nodes.Add(Globals.BULLET2[i]);
-                        treeView1.Nodes[i + 1].Nodes.Add(Globals.BULLET3[i]);
-                        treeView1.Nodes[i + 1].Nodes.Add(Globals.BULLET4[i]);
-                        treeView1.Nodes[i + 1].Nodes.Add(Globals.BULLET5[i]);
+                        if (!(Globals.BULLET1[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.BULLET1[i]);
+                        if (!(Globals.BULLET2[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.BULLET2[i]);
+                        if (!(Globals.BULLET3[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.BULLET3[i]);
+                        if (!(Globals.BULLET4[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.BULLET4[i]);
+                        if (!(Globals.BULLET5[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.BULLET5[i]);
                     }
                     catch
                     { }
-
+                }
+                if (!(Globals.IMAGE1[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE1[i]);
+                if (!(Globals.IMAGE2[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE2[i]);
+                if (!(Globals.IMAGE3[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE3[i]);
+                if (!(Globals.IMAGE4[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE4[i]);
+                if (!(Globals.IMAGE5[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE5[i]);
+                if (!(Globals.IMAGE6[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE6[i]);
+                if (!(Globals.IMAGE7[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE7[i]);
+                if (!(Globals.IMAGE8[i] == "")) treeView1.Nodes[i].Nodes.Add(Globals.IMAGE8[i]);
 
             }
 

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MicroListings.exe" version="1.0.0.8" publicKeyToken="d0690cecef50a9ff" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MicroListings" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MicroListings.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MicroListings.exe" size="208880">
+      <assemblyIdentity name="MicroListings" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jm6iwPDEfdbJiquB7ZbZCy8cZNKw/YyRKLcobP4g9ns=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MicroListings.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-T8QM708\SFDSALES" issuerKeyHash="dcfe0ee381257839ff92c154a302faea3e576910" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ZnzN/INx2Wd9UUPlK7gsDKjJc2bEOsBvVXG4u5PfiuU=</DigestValue></Reference></SignedInfo><SignatureValue>anPNCZRakjHR4MGPOGJsJfyNoDtVx93MzfAq3isRrpBcr5/cncd5mBnsBRsDNeYyzfKvXriJdcUoDAG90hm6Al06BncCZ8LUIq3XMqfMRdi8q59l6UR6KFJW8pvYko/gUAO0PwfBBiFIkaRWrXzf0nQbM/FYaRwxcc6kHYklJuc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>376BPE41eLV/KqUxIkCHIS0OwDQqzBxzceIk2/CWF/BYdEeOOmg5Lm5jOKqMFGj/Swlw2CZ0LYyWqx+jo2yBqHu25db95Pwv6a8B0L8cGRZX+f6E2jBsPcf54e1GsIrVaKlOn6CLdgyVV0E5FOC2MSqwq9AA2rZhytFBA1YwFE0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e58adf93bbb871556fc03ac46673c9a80c2cb82be543517d67d97183fccd7c66" Description="" Url=""><as:assemblyIdentity name="MicroListings.exe" version="1.0.0.8" publicKeyToken="d0690cecef50a9ff" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-T8QM708\SFDSALES</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>tKzdfmBlCXwVFtRGT+BdnKFByMyA3uvTqTeVwFmbWm8=</DigestValue></Reference></SignedInfo><SignatureValue>CgljSr7y5RcPewKtWtw5v6h8aMXGORM5lN3009hihwr0Raj280PCP140CQAsi30l2EPs3+jU8pOyiG76aPW2xb8heWcW0Pz0gVHG0P07FF3/Iye96ar7MFJw3Gt4+oPK80rOalnhxJSjhp/0lqMUD3O1d7E215xXlCPlzD9xoTw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>376BPE41eLV/KqUxIkCHIS0OwDQqzBxzceIk2/CWF/BYdEeOOmg5Lm5jOKqMFGj/Swlw2CZ0LYyWqx+jo2yBqHu25db95Pwv6a8B0L8cGRZX+f6E2jBsPcf54e1GsIrVaKlOn6CLdgyVV0E5FOC2MSqwq9AA2rZhytFBA1YwFE0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB+TCCAWKgAwIBAgIQa0DvykzE36xJ4j4WUGhMjjANBgkqhkiG9w0BAQsFADA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAFQAOABRAE0ANwAwADgAXABTAEYARABTAEEATABFAFMwHhcNMTkxMjEwMjE1ODMyWhcNMjAxMjEwMDM1ODMyWjA7MTkwNwYDVQQDHjAARABFAFMASwBUAE8AUAAtAFQAOABRAE0ANwAwADgAXABTAEYARABTAEEATABFAFMwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAN++gTxONXi1fyqlMSJAhyEtDsA0Kswcc3HiJNvwlhfwWHRHjjpoOS5uYziqjBRo/0sJcNgmdC2Mlqsfo6Nsgah7tuXW/eT8L+mvAdC/HBkWV/n+hNowbD3H+eHtRrCK1WipTp+gi3YMlVdBORTgtjEqsKvQANq2YcrRQQNWMBRNAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAEKwgLVhIO4NH3Yi9c24PQVeQwaLRfbaOkJD+ZQFHQvhKB69ea7gky5H5O4J9hPHjVeezyC0kxVeZpKp7OrxTBA6Ll9x43FEAdWdaSuxHqHshMCrBIvHLoswC4ERDVHqiadebMCUeU3ywavheL+Va9xdD3cIsFAcPtqpUB2wa2OU=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

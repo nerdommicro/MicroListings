@@ -400,7 +400,7 @@ namespace MicroListings
                  "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
                            "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
                            txtVariationThemeB2B.Text + "\t" +
-                           Globals.SKUS[i] + "\t" +
+                           txtParentSku.Text + "\t" +
                            txtRelationshipType.Text + "\t" +
                            "Child" + "\t" +
                            "PartialUpdate" + "\t" +

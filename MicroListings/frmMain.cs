@@ -203,11 +203,11 @@ namespace MicroListings
 
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
-            string filename = @"C:\Users\SFDSALES\Documents\MicroListings\Listings" + System.DateTime.Today.Month + "_" + System.DateTime.Today.Day + "_" + System.DateTime.Today.Year + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + ".txt";
-            if (!(System.IO.File.Exists(filename))) { System.IO.File.Copy(@"C:\Users\SFDSALES\Documents\MicroListings\amazon_feed.txt", filename); }
+            string filename = @"E:\textfiles\Listings" + System.DateTime.Today.Month + "_" + System.DateTime.Today.Day + "_" + System.DateTime.Today.Year + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + ".txt";
+            if (!(System.IO.File.Exists(filename))) { System.IO.File.Copy(@"E:\textfiles\amazon_feed.txt", filename); }
             
-            string filename2 = @"C:\Users\SFDSALES\Documents\MicroListings\Listings" + System.DateTime.Today.Month + "_" + System.DateTime.Today.Day + "_" + System.DateTime.Today.Year + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + "_b2b.txt";
-            if (!(System.IO.File.Exists(filename2))) { System.IO.File.Copy(@"C:\Users\SFDSALES\Documents\MicroListings\b2b.txt", filename2); }
+            string filename2 = @"E:\textfiles\Listings" + System.DateTime.Today.Month + "_" + System.DateTime.Today.Day + "_" + System.DateTime.Today.Year + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + "_b2b.txt";
+            if (!(System.IO.File.Exists(filename2))) { System.IO.File.Copy(@"E:\textfiles\b2b.txt", filename2); }
 
             System.IO.StreamWriter file1 = new System.IO.StreamWriter(filename, true);
             System.IO.StreamWriter file2 = new System.IO.StreamWriter(filename2, true);

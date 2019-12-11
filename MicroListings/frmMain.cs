@@ -423,7 +423,7 @@ namespace MicroListings
                  "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
                            "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" + "" + "\t" +
                            txtVariationThemeB2B.Text + "\t" +
-                           txtParentSku.Text + "\t" +
+                           Globals.SKUS[i] + "\t" +
                            txtRelationshipType.Text + "\t" +
                            "Child" + "\t" +
                            "PartialUpdate" + "\t" +
@@ -479,6 +479,9 @@ namespace MicroListings
                 file2.WriteLine(lines[i]);
 
             }
+            file1.Close();
+            file2.Close();
+
 
 
 

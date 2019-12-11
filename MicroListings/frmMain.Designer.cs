@@ -37,11 +37,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtItemNames = new System.Windows.Forms.TextBox();
             this.tabPageDescription = new System.Windows.Forms.TabPage();
+            this.btnSaveItemDesc = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.txtBullets = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.tabPageImages = new System.Windows.Forms.TabPage();
+            this.btnSaveImages = new System.Windows.Forms.Button();
             this.chkClearVariation8 = new System.Windows.Forms.CheckBox();
             this.chkClearVariation7 = new System.Windows.Forms.CheckBox();
             this.chkClearVariation6 = new System.Windows.Forms.CheckBox();
@@ -67,7 +69,6 @@
             this.txtSizeNames = new System.Windows.Forms.TextBox();
             this.tabPagePreview = new System.Windows.Forms.TabPage();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.btnSaveItemDesc = new System.Windows.Forms.Button();
             this.txtFeedProductType = new System.Windows.Forms.TextBox();
             this.txtManufacturer = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -194,6 +195,7 @@
             // 
             // tabPageDescription
             // 
+            this.tabPageDescription.Controls.Add(this.btnSaveItemDesc);
             this.tabPageDescription.Controls.Add(this.label17);
             this.tabPageDescription.Controls.Add(this.txtBullets);
             this.tabPageDescription.Controls.Add(this.label4);
@@ -206,10 +208,20 @@
             this.tabPageDescription.Text = "Description";
             this.tabPageDescription.UseVisualStyleBackColor = true;
             // 
+            // btnSaveItemDesc
+            // 
+            this.btnSaveItemDesc.Location = new System.Drawing.Point(701, 227);
+            this.btnSaveItemDesc.Name = "btnSaveItemDesc";
+            this.btnSaveItemDesc.Size = new System.Drawing.Size(90, 27);
+            this.btnSaveItemDesc.TabIndex = 61;
+            this.btnSaveItemDesc.Text = "Save Item";
+            this.btnSaveItemDesc.UseVisualStyleBackColor = true;
+            this.btnSaveItemDesc.Click += new System.EventHandler(this.btnSaveItemDesc_Click_1);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(5, 69);
+            this.label17.Location = new System.Drawing.Point(4, 60);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 15);
             this.label17.TabIndex = 30;
@@ -217,11 +229,11 @@
             // 
             // txtBullets
             // 
-            this.txtBullets.Location = new System.Drawing.Point(6, 85);
+            this.txtBullets.Location = new System.Drawing.Point(5, 76);
             this.txtBullets.Multiline = true;
             this.txtBullets.Name = "txtBullets";
             this.txtBullets.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBullets.Size = new System.Drawing.Size(786, 166);
+            this.txtBullets.Size = new System.Drawing.Size(786, 147);
             this.txtBullets.TabIndex = 29;
             // 
             // label4
@@ -238,11 +250,12 @@
             this.txtDescription.Location = new System.Drawing.Point(7, 17);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(785, 48);
+            this.txtDescription.Size = new System.Drawing.Size(785, 38);
             this.txtDescription.TabIndex = 0;
             // 
             // tabPageImages
             // 
+            this.tabPageImages.Controls.Add(this.btnSaveImages);
             this.tabPageImages.Controls.Add(this.chkClearVariation8);
             this.tabPageImages.Controls.Add(this.chkClearVariation7);
             this.tabPageImages.Controls.Add(this.chkClearVariation6);
@@ -266,6 +279,16 @@
             this.tabPageImages.TabIndex = 1;
             this.tabPageImages.Text = "Images";
             this.tabPageImages.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveImages
+            // 
+            this.btnSaveImages.Location = new System.Drawing.Point(609, 224);
+            this.btnSaveImages.Name = "btnSaveImages";
+            this.btnSaveImages.Size = new System.Drawing.Size(90, 27);
+            this.btnSaveImages.TabIndex = 61;
+            this.btnSaveImages.Text = "Save Images";
+            this.btnSaveImages.UseVisualStyleBackColor = true;
+            this.btnSaveImages.Click += new System.EventHandler(this.btnSaveImages_Click);
             // 
             // chkClearVariation8
             // 
@@ -505,16 +528,6 @@
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(801, 257);
             this.treeView1.TabIndex = 0;
-            // 
-            // btnSaveItemDesc
-            // 
-            this.btnSaveItemDesc.Location = new System.Drawing.Point(526, 482);
-            this.btnSaveItemDesc.Name = "btnSaveItemDesc";
-            this.btnSaveItemDesc.Size = new System.Drawing.Size(90, 27);
-            this.btnSaveItemDesc.TabIndex = 60;
-            this.btnSaveItemDesc.Text = "Save Item";
-            this.btnSaveItemDesc.UseVisualStyleBackColor = true;
-            this.btnSaveItemDesc.Click += new System.EventHandler(this.btnSaveItemDesc_Click);
             // 
             // txtFeedProductType
             // 
@@ -789,7 +802,6 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txtItemTypeB2B);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnSaveItemDesc);
             this.Controls.Add(this.btnSaveFile);
             this.Controls.Add(this.txtItemType);
             this.Controls.Add(this.txtVariationTheme);
@@ -877,7 +889,6 @@
         private System.Windows.Forms.TextBox txtItemType;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnSaveAll;
-        private System.Windows.Forms.Button btnSaveItemDesc;
         private System.Windows.Forms.Button btnSaveFile;
         private System.Windows.Forms.TabPage tabPageItems;
         private System.Windows.Forms.Label label18;
@@ -906,6 +917,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtVariationThemeB2B;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btnSaveImages;
+        private System.Windows.Forms.Button btnSaveItemDesc;
     }
 }
 

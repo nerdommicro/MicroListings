@@ -198,30 +198,7 @@ namespace MicroListings
 
         private void btnSaveItemDesc_Click(object sender, EventArgs e)
         {
-            Globals.DESCRIPTIONS[listBoxSkus.SelectedIndex] = txtDescription.Text;        
-
-                if (!(txtBullets.Text == ""))
-                {
-                    try
-                    {
-                        Globals.BULLET1[listBoxSkus.SelectedIndex] = txtBullets.Lines[0];
-                        Globals.BULLET2[listBoxSkus.SelectedIndex] = txtBullets.Lines[1];
-                        Globals.BULLET3[listBoxSkus.SelectedIndex] = txtBullets.Lines[2];
-                        Globals.BULLET4[listBoxSkus.SelectedIndex] = txtBullets.Lines[3];
-                        Globals.BULLET5[listBoxSkus.SelectedIndex] = txtBullets.Lines[4];
-                    }
-                    catch { }
-                   
-                }
-                        Globals.IMAGE1[listBoxSkus.SelectedIndex] = txtImage1.Text;
-                        Globals.IMAGE2[listBoxSkus.SelectedIndex] = txtImage2.Text;
-                        Globals.IMAGE3[listBoxSkus.SelectedIndex] = txtImage3.Text;
-                        Globals.IMAGE4[listBoxSkus.SelectedIndex] = txtImage4.Text;
-                        Globals.IMAGE5[listBoxSkus.SelectedIndex] = txtImage5.Text;
-                        Globals.IMAGE6[listBoxSkus.SelectedIndex] = txtImage6.Text;
-                        Globals.IMAGE7[listBoxSkus.SelectedIndex] = txtImage7.Text;
-                        Globals.IMAGE8[listBoxSkus.SelectedIndex] = txtImage8.Text;
-            AddTreeNodes();
+            
         }
 
         private void btnSaveFile_Click(object sender, EventArgs e)
@@ -414,7 +391,7 @@ namespace MicroListings
             for (int i = 0; i < txtPasteSKUs.Lines.Count(); i++)
             {
                 lines[i] = "" + "\t" +
-                txtParentSku.Text + "\t" +
+                Globals.SKUS[i] + "\t" +
                 "" + "\t" +
                 "" + "\t" +
                 "" + "\t" +
@@ -481,13 +458,39 @@ namespace MicroListings
             }
             file1.Close();
             file2.Close();
+        }
 
+        private void btnSaveItemDesc_Click_1(object sender, EventArgs e)
+        {
+            Globals.DESCRIPTIONS[listBoxSkus.SelectedIndex] = txtDescription.Text;
 
+            if (!(txtBullets.Text == ""))
+            {
+                try
+                {
+                    Globals.BULLET1[listBoxSkus.SelectedIndex] = txtBullets.Lines[0];
+                    Globals.BULLET2[listBoxSkus.SelectedIndex] = txtBullets.Lines[1];
+                    Globals.BULLET3[listBoxSkus.SelectedIndex] = txtBullets.Lines[2];
+                    Globals.BULLET4[listBoxSkus.SelectedIndex] = txtBullets.Lines[3];
+                    Globals.BULLET5[listBoxSkus.SelectedIndex] = txtBullets.Lines[4];
+                }
+                catch { }
 
+            }
+           
+            AddTreeNodes();
+        }
 
-
-
-
+        private void btnSaveImages_Click(object sender, EventArgs e)
+        {
+            Globals.IMAGE1[listBoxSkus.SelectedIndex] = txtImage1.Text;
+            Globals.IMAGE2[listBoxSkus.SelectedIndex] = txtImage2.Text;
+            Globals.IMAGE3[listBoxSkus.SelectedIndex] = txtImage3.Text;
+            Globals.IMAGE4[listBoxSkus.SelectedIndex] = txtImage4.Text;
+            Globals.IMAGE5[listBoxSkus.SelectedIndex] = txtImage5.Text;
+            Globals.IMAGE6[listBoxSkus.SelectedIndex] = txtImage6.Text;
+            Globals.IMAGE7[listBoxSkus.SelectedIndex] = txtImage7.Text;
+            Globals.IMAGE8[listBoxSkus.SelectedIndex] = txtImage8.Text;
         }
     }
 }

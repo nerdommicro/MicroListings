@@ -491,6 +491,7 @@ namespace MicroListings
             Globals.IMAGE6[listBoxSkus.SelectedIndex] = txtImage6.Text;
             Globals.IMAGE7[listBoxSkus.SelectedIndex] = txtImage7.Text;
             Globals.IMAGE8[listBoxSkus.SelectedIndex] = txtImage8.Text;
+            AddTreeNodes();
         }
     }
 }
